@@ -1,0 +1,375 @@
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+color: #fcfcfc;
+list-style-type: none ;
+}
+
+html {
+font-size: 62.5%;
+}
+
+/*BODY*/
+body {
+  background-image: url("../img/fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 100%;
+}
+
+/* Fonds */
+
+.dancing-script {
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  /* Fin Fonds */
+
+/* Header */
+
+  img{
+    max-width: 100%;
+    display: block;
+  }
+
+ 
+  
+
+
+
+  .headerN{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem 6rem;
+  }
+  
+  .navHeader{
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+    padding: 0;
+    margin-right: 3rem;
+  }
+  
+  .navHeader li{
+    width: 7rem;
+    margin: 1rem;
+    font-size: 3rem;
+    color: black;
+    font-family: "Dancing Script", serif;
+    text-align: center;
+  }
+
+  a{
+    display: block;
+    text-decoration: none;
+    color: black;   
+  }
+
+
+  a:hover{
+    background-color: #9ca2a2;
+    box-shadow: 5px 5px 20px 3px #ac8d8d;
+    color: #fff;
+    border-radius: 1rem;
+    width: 10rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .logo{
+    width: 30rem;
+  }
+  
+  .buscador{
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    height: 5rem;
+    border-radius: 1rem;
+    background-color: #9ca2a2;
+    padding: .2rem 0;
+    margin: 1rem;
+    right: 1rem;
+  }
+
+  .finder{
+    width: 83%;
+    font-size: 2rem;
+    background-color: #9ca2a2;
+    border: none;
+    text-align: end;
+    padding: .2rem 0;
+    color: black;
+
+  }
+
+  .lupa{
+    width: 4rem;
+    margin: 0 .5rem;
+  }
+  
+
+
+
+  /* --------------Fin Header----------------- */
+
+  
+
+
+
+  /* ------------Cuerpo--------------- */
+
+
+  /* Banner */
+
+  /* Fin Banner */
+
+
+  /* Cards */
+
+  #dressCar{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem 1rem;
+    justify-items: center;
+    margin: 2rem 0;
+  }
+
+  .cardImg{
+    margin: -2.2rem auto;
+    width: 80%;
+    
+  }
+  .navFooter{
+    display: none;
+  }
+  @media (max-width: 1345px) {
+    .navHeader{
+      margin-right: 2rem;
+    }
+  }
+  
+  @media (max-width: 1270px) {
+    .navHeader{
+      width: 40rem;
+    }
+  }
+  @media (max-width: 1200px) {
+      .headerN{
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        grid-template-rows: 6rem 6rem;
+        grid-template-areas: 
+        "logo nav"
+        "logo buscador";
+      }
+    
+      .logo{
+        grid-area: logo;
+      }
+      nav{
+        grid-area: nav;
+        margin: auto;
+      }
+    
+      .buscador{
+        grid-area: buscador;
+        width: 60%;
+        margin: auto;
+      }
+    }
+
+
+
+  @media (max-width: 1100px) {
+    #dressCar{
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+  }
+  .headerN{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 6rem 6rem;
+    grid-template-areas: 
+    "logo nav"
+    "logo buscador";
+  }
+
+  .logo{
+    grid-area: logo;
+  }
+  nav{
+    grid-area: nav;
+    margin: auto;
+  }
+
+  .buscador{
+    grid-area: buscador;
+    width: 60%;
+    margin: auto;
+  }
+  
+  
+
+}
+
+
+
+@media (max-width: 800px) {
+  .navHeader{
+    margin: 0;
+  }
+  
+}
+
+@media (max-width: 880px) {
+  #dressCar{
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+  .logo{
+    width: 25rem;
+    margin: 2rem 2rem;
+  }
+}
+@media (max-width: 710px){
+  #dressCar{
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  .headerN {
+    display: grid;
+    grid-template-columns: 252.6px 0.8fr;
+    grid-template-rows: 100px;
+    margin: 3rem 0 6rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo buscador";
+  }
+  
+  .logo { 
+    grid-area: logo; 
+  }
+  
+  .buscador { 
+    grid-area: buscador; 
+    width: 83%;
+    margin: auto;
+  }
+
+  .navHeader{
+    display: none;
+  }
+  
+  .navFooter{
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    bottom: .8rem;
+    left: .7rem;
+    right: .7rem;
+    width: 97%;
+    margin: 1rem;
+    justify-content: space-between;
+    background-color: #d8d8d8da;
+    border-radius: 3rem;
+    padding: .8rem;
+  }
+
+  .iconNav{
+    width: 4rem;
+    background-color: white;
+    border-radius: 3rem;
+    padding: .3rem;
+  }
+
+
+  .iconNav:hover{
+    transform: scale(1.3);
+    background-color: rgb(185, 192, 192);
+    border: solid 1px #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  .logoFooter{
+    display: none;
+  }
+
+}
+
+    
+  .card{
+    border-radius: 1.5rem;
+    background-color: slategrey;
+    width: 15rem;
+    height: 20rem;
+    box-shadow: 5px 5px 20px 3px #ac8d8d;
+  }
+
+  .produ{
+    font-family: "Roboto", sans-serif;
+    font-size: 2.2rem;
+    margin: 2rem 1rem;
+  }
+
+
+  .oferta{
+    font-size: 1.3rem;
+  }
+  .precio{
+    font-size: 1.3rem;
+  }
+
+  .compraCarrito{
+    width: 2.5rem;
+  }
+
+  /* Fin Cards */
+
+
+  /* -----------------Fin Cuerpo-------------------- */
+
+  /* Footer */
+
+  .logoFooter{
+    margin: 2rem;
+    width: 30rem;
+  }
+
+  /* Fin Footer */
