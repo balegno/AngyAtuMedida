@@ -99,16 +99,36 @@ body {
   }
 
 
-  a:hover{
-    background-color: #9ca2a2;
-    box-shadow: 5px 5px 20px 3px #ac8d8d;
-    color: #fff;
-    border-radius: 1rem;
-    width: 10rem;
-    transition: all 0.3s ease-in-out;
+
+  .inicioHeder{
+    position: relative;
+    color: #000;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  .inicioHeder:after{
+    content: "";
+    position: absolute;
+    background-color: #f38eac;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition:width 0.3s;
   }
   
-  
+  .inicioHeder:hover{
+    color: #534747;
+    transform: scale(1.4);
+    transition: all 0.5s;
+  }
+  .inicioHeder:hover:after{
+    width: 100%;
+  }
+
   .logo{
     width: 30rem;
   }
@@ -118,27 +138,24 @@ body {
     justify-content: end;
     width: 30%;
     height: 5rem;
-    border-radius: 1rem;
-    background-color: #9ca2a2;
-    padding: .2rem 0;
-    margin: 1rem;
-    right: 1rem;
+    border-bottom:solid 2px black;
+    margin: 2rem;
   }
 
   .finder{
-    width: 83%;
-    font-size: 2rem;
-    background-color: #9ca2a2;
+    width: 100%;
     border: none;
-    text-align: end;
-    padding: .2rem 0;
+    background: none;
+    font-size: 2.7rem;
     color: black;
+    outline: none;
+    padding: 0 1rem ;
 
   }
   
 
   .lupa{
-    width: 4rem;
+    width: 4.5rem;
     margin: 0 .5rem;
   }
   
@@ -170,10 +187,38 @@ body {
   }
 
   .cardImg{
-    margin: -2.2rem auto;
-    width: 80%;
-    
+    margin: -3.5rem auto 0;    
   }
+
+  .compraCarrito{
+    display: none;
+  }
+
+  .compraYa{
+    display: none;
+    color: #fff;
+    width: 13rem;
+    margin: auto;
+    background: #a8aba8;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+  }
+  .compraYa:hover{
+    background-color: #7df47f;
+    transition: ease-in-out .8s;
+    box-shadow: 5px 5px 20px 3px #f19a7a;
+    color: #000;
+    width: 13rem;
+    margin: auto;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border: 2px solid #000;
+    border-radius: 1rem;
+  }
+
+
   .navFooter{
     display: none;
   }
@@ -181,11 +226,17 @@ body {
     .navHeader{
       margin-right: 2rem;
     }
+    .compraCarrito{
+      display: none;
+    }
   }
   
   @media (max-width: 1270px) {
     .navHeader{
       width: 40rem;
+    }
+    .compraCarrito{
+      display: none;
     }
   }
   @media (max-width: 1200px) {
@@ -197,7 +248,9 @@ body {
         "logo nav"
         "logo buscador";
       }
-    
+      .compraCarrito{
+        display: none;
+      }
       .logo{
         grid-area: logo;
       }
@@ -228,7 +281,9 @@ body {
     "logo nav"
     "logo buscador";
   }
-
+  .compraCarrito{
+    display: none;
+  }
   .logo{
     grid-area: logo;
   }
@@ -253,7 +308,9 @@ body {
   .navHeader{
     margin: 0;
   }
-  
+  .compraCarrito{
+    display: none;
+  }
 }
 
 @media (max-width: 880px) {
@@ -264,6 +321,9 @@ body {
   .logo{
     width: 25rem;
     margin: 2rem 2rem;
+  }
+  .compraCarrito{
+    display: none;
   }
 }
 @media (max-width: 710px){
@@ -312,6 +372,17 @@ body {
     padding: .8rem;
   }
 
+  .card:hover .compraYa{
+    display: none;
+
+  }
+
+
+
+  .compraCarrito{
+    width: 3rem;
+    display: block;
+  }
   .iconNav{
     width: 4rem;
     background-color: white;
@@ -339,27 +410,39 @@ body {
     border-radius: 1.5rem;
     background-color: slategrey;
     width: 15rem;
-    height: 20rem;
+    height: 23.5rem;
     box-shadow: 5px 5px 20px 3px #ac8d8d;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .card:hover .compraYa{
+    display: block;
+
   }
 
   .produ{
     font-family: "Roboto", sans-serif;
     font-size: 2.2rem;
-    margin: 2rem 1rem;
+    margin: 0 1rem;
   }
 
 
-  .oferta{
-    font-size: 1.3rem;
-  }
+  /* .oferta{
+    font-size: 1rem;
+  } */
   .precio{
-    font-size: 1.3rem;
+    font-size: 2rem;
+    margin: 0 1rem;
   }
 
-  .compraCarrito{
-    width: 2.5rem;
+  .compra{
+    display: flex;
+    justify-content: end;
+
   }
+
+  
 
   /* Fin Cards */
 

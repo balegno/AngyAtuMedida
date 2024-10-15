@@ -1,12 +1,19 @@
 //VARIABLES
 const cards= document.querySelector('#dressCar')
 const menu= document.querySelector("#menu")
+const carrito= document.querySelectorAll(".cCarrito")
+
 
 
 //EVENTOS
 document.addEventListener('DOMContentLoaded',()=> {
     mostrarDress();
 })
+
+eventCarrito()
+function eventCarrito(){
+    listaCarrito.addEventListener('click', agregarCompra)
+}
 
 
 const menuOffset = menu.menuOffsetTop
@@ -40,8 +47,10 @@ function mostrarDress(){
         const fin = document.createElement('div')
         fin.innerHTML= 
         `
-            <div id="compra">
-                <img class="compraCarrito" src="iconos/carrrito.png" alt="carritoLogo"
+            <div class="compra">
+                <img class="compraCarrito cCarrito" src="iconos/carrrito.png" alt="carritoLogo">
+
+                <a href="" class="compraYa cCarrito">Comprar Ahora!</a>
             </div>
         
 
@@ -57,6 +66,12 @@ function mostrarDress(){
         const dressCar = document.getElementById('dressCar');
         dressCar.appendChild(vestidoHTML);
     });
+
+
+
+    function agregarCompra(e){
+        console.log(e.target.classList)
+    }
 }
 
 
