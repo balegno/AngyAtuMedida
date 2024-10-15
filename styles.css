@@ -2,7 +2,6 @@
 margin: 0;
 padding: 0;
 text-decoration: none;
-color: #fcfcfc;
 list-style-type: none ;
 }
 
@@ -121,7 +120,7 @@ body {
   }
   
   .inicioHeder:hover{
-    color: #534747;
+    color: #2f2c2c;
     transform: scale(1.4);
     transition: all 0.5s;
   }
