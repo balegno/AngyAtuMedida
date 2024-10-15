@@ -11,12 +11,11 @@ font-size: 62.5%;
 
 /*BODY*/
 body {
-  background-image: url("img/fondo.png");
+  background-image: url("img/fondo1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
-  height: 100%;
+  width: 100%;
 }
 
 /* Fonds */
@@ -314,38 +313,68 @@ body {
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
   }
-  .logo{
-    width: 25rem;
-    margin: 2rem 2rem;
+
+  .headerN{
+    display: grid;
+    grid-template-columns: 1fr 4fr; 
+    grid-template-rows: 0.1fr .1fr; 
+    gap: 5px 3px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo nav nav"
+      "logo buscador buscador";
   }
+  
+  .navHeader{
+    grid-area: nav; 
+  }
+  
+  .logo{
+    grid-area: logo;
+    width: 17rem;
+    margin: 5px;
+  }
+  
+  
+  .buscador{
+    grid-area: buscador; 
+  }
+  
   .compraCarrito{
     display: none;
   }
 }
 @media (max-width: 710px){
+
+  body {
+    background-image: url("img/fondo4.png");
+    width: 100%;
+  }
+  
   #dressCar{
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
   }
 
+
+
   .headerN {
     display: grid;
-    grid-template-columns: 252.6px 0.8fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 100px;
-    margin: 3rem 0 6rem;
+    margin: 1rem 0 4rem;
     grid-auto-flow: row;
     grid-template-areas:
       "logo buscador";
   }
   
   .logo { 
-    grid-area: logo; 
+    grid-area: logo;
   }
   
   .buscador { 
-    grid-area: buscador; 
-    width: 83%;
-    margin: auto;
+    grid-area: buscador;
+    width: 80%;
   }
 
   .navHeader{
@@ -360,10 +389,10 @@ body {
     bottom: .8rem;
     left: .7rem;
     right: .7rem;
-    width: 97%;
-    margin: 1rem;
+    width: 95%;
+    margin: auto;
     justify-content: space-between;
-    background-color: #d8d8d8da;
+    background-color: #d8d8d84f;
     border-radius: 3rem;
     padding: .8rem;
   }
@@ -405,11 +434,11 @@ body {
   .card{
     border-radius: 1.5rem;
     background-color: slategrey;
-    width: 15rem;
-    height: 23.5rem;
+    width: 11rem;
+    height: 21.5rem;
     box-shadow: 5px 5px 20px 3px #ac8d8d;
-    padding: 1rem;
-    gap: 1rem;
+    padding: .5rem;
+    gap: .5rem;
   }
 
   .card:hover .compraYa{
